@@ -21,6 +21,7 @@ export * from "./core/message/IMessage";
 export * from "./core/message/Message";
 export * from "./core/observable/IObservable";
 export * from "./core/observable/Observable";
+export * from './core/interfaces/JSFile';
 
 export * from './utils/ArrayUtil';
 export * from './utils/ConstructUtil';
@@ -40,5 +41,5 @@ export * from './utils/SyncUtil';
 export * from './utils/TimeUtil';
 export * from './utils/URLUtil';
 
-export * from "./engine/resource/ResourceManager";
-export * from "./engine/resource/ResourceItem";
+export * from "./resource/ResourceManager";
+export * from "./resource/ResourceItem";
