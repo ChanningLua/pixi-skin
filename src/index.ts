@@ -39,3 +39,6 @@ export * from './utils/StringUtil';
 export * from './utils/SyncUtil';
 export * from './utils/TimeUtil';
 export * from './utils/URLUtil';
+
+export * from "./engine/resource/ResourceManager";
+export * from "./engine/resource/ResourceItem";
