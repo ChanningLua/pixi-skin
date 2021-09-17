@@ -1,0 +1,1 @@
+{"version":3,"file":"ICommandConstructor.d.ts","sourceRoot":"","sources":["../../../../src/core/command/ICommandConstructor.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,QAAQ,EAAC,MAAM,qBAAqB,CAAC;AAC7C,OAAO,EAAC,OAAO,EAAC,MAAM,WAAW,CAAC;AAKlC,MAAM,WAAW,mBAAmB;IAEhC,KAAK,GAAG,EAAC,QAAQ,GAAE,OAAO,CAAC;CAC9B"}

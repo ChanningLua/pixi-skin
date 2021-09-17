@@ -1,0 +1,26 @@
+{
+  "compilerOptions":{
+    "strict": false,
+    "module":"esnext",
+    "target":"es5",
+    "moduleResolution":"node",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata":true,
+    "experimentalDecorators":true,
+    "sourceMap":true,
+    "declaration":true,
+    "declarationMap": true,
+    "baseUrl": "./",
+    "downlevelIteration":true,      // 是否允许TS使用实验性功能迭代器
+    "removeComments": true,
+    "skipLibCheck":true,
+    "outDir":"libs",
+    "allowJs": true,
+    "lib":[
+      "es2017",
+      "dom",
+      "dom.iterable"
+    ],
+    "allowSyntheticDefaultImports":true
+  }
+}

@@ -1,0 +1,56 @@
+export class RenderSheet {
+    constructor(options: {
+        maxSize: number;
+        buffer: number;
+        scale: number;
+        resolution: number;
+        extrude: number;
+        wait: number;
+        testBoxes: boolean;
+        scaleMode: number | boolean;
+        useSimplePacker: boolean;
+        show: boolean | object;
+    });
+    wait: number;
+    testBoxes: boolean;
+    maxSize: number;
+    buffer: number;
+    scale: number;
+    scaleMode: any;
+    resolution: number;
+    show: any;
+    extrude: number;
+    packer: typeof GrowingPacker | typeof SimplePacker;
+    clear(): void;
+    canvases: any[];
+    baseTextures: any[];
+    textures: {};
+    add(name: string, draw: Function, measure: Function, param: any): object;
+    addImage(name: string, src: string): object;
+    addData(name: any, data: object, header?: string): object;
+    private showCanvases;
+    divCanvases: HTMLDivElement;
+    exists(name: string): boolean;
+    getTexture(name: string): (any | null);
+    getSprite(name: string, anchorValue?: number): any;
+    get(name: string): any;
+    entries(): number;
+    debug(): void;
+    getIndex(find: number): any;
+    checkLoaded(): boolean;
+    asyncRender(skipTextures: boolean): Promise<any>;
+    render(callback?: Function, callbackThisArag?: Function, skipTextures?: boolean): void;
+    sorted: any[];
+    private measure;
+    private sort;
+    private createCanvas;
+    private randomColor;
+    private draw;
+    private extrudeEntry;
+    private createBaseTextures;
+    private pack;
+    changeDraw(name: string, draw: Function): void;
+}
+import { GrowingPacker } from "./growingpacker";
+import { SimplePacker } from "./simplepacker";
+//# sourceMappingURL=RenderTextures.d.ts.map

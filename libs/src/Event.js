@@ -1,0 +1,11 @@
+export var EVENT_ADDED = 'added';
+export var EVENT_REMOVED = 'removed';
+export var EVENT_POINTER_CANCEL = 'pointercancel';
+export var EVENT_POINTER_DOWN = 'pointerdown';
+export var EVENT_POINTER_MOVE = 'pointermove';
+export var EVENT_POINTER_OUT = 'pointerout';
+export var EVENT_POINTER_OVER = 'pointerover';
+export var EVENT_POINTER_TAP = 'pointertap';
+export var EVENT_POINTER_UP = 'pointerup';
+export var EVENT_POINTER_OUTSIDE = 'pointerupoutside';
+//# sourceMappingURL=Event.js.map

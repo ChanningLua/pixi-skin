@@ -1,0 +1,48 @@
+import { ResourceItem } from './ResourceItem';
+import { JSFile } from './../core/interfaces/JSFile';
+export declare class ResourceManagerClass {
+    GROUP_ERROR: string;
+    GROUP_COMPLETE: string;
+    GROUP_PROGRESS: string;
+    LOAD_GROUP_COMPLETE: string;
+    private resourceLoader;
+    private resourceConfig;
+    private init;
+    private configsList;
+    private loadingConfigList;
+    private configComplete;
+    constructor();
+    listen(type: IConstructor | string, handler: Function, thisArg?: any, once?: boolean): void;
+    unlisten(type: IConstructor | string, handler: Function, thisArg?: any, once?: boolean): void;
+    private _onConfigComplete;
+    private _onConfigCompleteTarget;
+    private _pathDict;
+    addConfig(jsonPath: string, filePath?: string, pilfererLoad?: boolean): void;
+    loadConfig($onConfigComplete: Function, $onConfigCompleteTarget: any): void;
+    private loadNextConfig;
+    private configPreLoad;
+    private onConfigCompleteHandle;
+    private loadedGroups;
+    isGroupLoaded(name: string): boolean;
+    getGroupByName(name: string): Array<ResourceItem>;
+    private groupNameList;
+    loadGroup(name: string, priority?: number): void;
+    createGroup(name: string, keys: string[], override?: boolean): boolean;
+    private onGROUP_COMPLETE;
+    private loadDelayGroups;
+    private onGROUP_ERROR;
+    parseConfig(data: any, folder: string): void;
+    getAssets(key: string, load?: boolean): Promise<any>;
+    getResourceItem(key: string): ResourceItem;
+    loadAssets(keyOrPath: string | string[], complete: (assets?: any | any[], path?: string) => void, responseType?: XMLHttpRequestResponseType, oneComplete?: (keyOrPath?: string, assets?: any) => void): void;
+    private asyncDic;
+    private onResourceItemComp;
+    private isResInLoadedGroup;
+    setMaxLoadingThread(thread: number): void;
+    setMaxRetryTimes(retry: number): void;
+    loadStyleFiles(cssFiles: string[], handler: (err?: Error) => void): void;
+    loadJsFiles(jsFiles: JSFile[], handler: (err?: Error) => void, ordered?: boolean): void;
+    pilfererLoadGroup($groupName: string, $subGroups?: Array<any>): void;
+}
+export declare const resourceManager: ResourceManagerClass;
+//# sourceMappingURL=ResourceManager.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"IMessage.d.ts","sourceRoot":"","sources":["../../../../src/core/message/IMessage.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,WAAW,EAAC,MAAM,2BAA2B,CAAC;AAKtD,MAAM,WAAW,QAAQ;IASrB,QAAQ,CAAC,MAAM,EAAC,MAAM,CAAC;IAOvB,QAAQ,CAAC,YAAY,EAAC,WAAW,CAAC;IAOlC,QAAQ,CAAC,eAAe,EAAC,WAAW,CAAC;IAOrC,QAAQ,CAAC,aAAa,EAAC,WAAW,EAAE,CAAC;IAOrC,UAAU,IAAG,IAAI,CAAC;CACrB"}

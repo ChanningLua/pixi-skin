@@ -1,0 +1,1 @@
+{"version":3,"file":"SkinParser.d.ts","sourceRoot":"","sources":["../../../src/utils/SkinParser.ts"],"names":[],"mappings":"AAMA,OAAO,EAAE,sBAAsB,EAAE,MAAM,6BAA6B,CAAC;AA2DrE,wBAAgB,eAAe,CAAC,MAAM,EAAE,GAAG,EAAE,QAAQ,EAAE,MAAM,GAAG,IAAI,CAqBnE;AAGD,wBAAgB,sBAAsB,CAAC,MAAM,EAAE,sBAAsB,EAAE,MAAM,EAAE,GAAG,GAAG,IAAI,CA6CxF;AAuRD,wBAAgB,iBAAiB,CAAC,UAAU,EAAE,GAAG,GAAG,GAAG,CAyDtD"}
