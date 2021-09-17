@@ -6,6 +6,8 @@ export { Image } from "./components/Image";
 export { Label } from "./components/Label";
 export { Input } from "./components/base/Input";
 export { ScrollerBase } from "./components/base/ScrollerBase";
+export * from "./Event";
+export * from "./Constant";
 export { core } from "./core/Core";
 export * from "./core/command/Command";
 export * from "./core/command/ICommandConstructor";
