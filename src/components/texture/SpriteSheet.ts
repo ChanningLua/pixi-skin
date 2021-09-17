@@ -47,7 +47,7 @@ export class SpriteSheet {
       core.unlisten('render', this.sheetTexture, this);
 
       const sheetTexture = this.sheet.getTexture(this.path);
-      const canvas: any = sheetTexture.baseTexture.source;
+      const canvas: any = sheetTexture.baseTexture['resource'];
       const context = canvas.getContext('2d');
       for (let key in this.textureFrames) {
           let textureFrame: textureFrame = this.textureFrames[key];

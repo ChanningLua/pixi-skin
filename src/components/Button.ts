@@ -45,12 +45,12 @@ export class Button extends Component
 
 
     protected _downPoint: PIXI.Point;
-    protected onPointerDown(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerDown(evt: PIXI.InteractionEvent): void
     {
         this._downPoint = evt.data.global.clone();
         this.childrenState = 'down';
     }
-    protected onPointerMove(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerMove(evt: PIXI.InteractionEvent): void
     {
         if (this._downPoint == null)
         {
@@ -63,24 +63,24 @@ export class Button extends Component
             this.childrenState = 'up';
         }
     }
-    protected onPointerOut(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerOut(evt: PIXI.InteractionEvent): void
     {
         this.onCancel(evt);
     }
-    protected onPointerUp(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerUp(evt: PIXI.InteractionEvent): void
     {
         this.onCancel(evt);
     }
-    protected onPointerOutside(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerOutside(evt: PIXI.InteractionEvent): void
     {
         this.onCancel(evt);
     }
-    protected onPointerTap(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerTap(evt: PIXI.InteractionEvent): void
     {
         this.childrenState = 'up';
     }
 
-    private onCancel(evt: PIXI.interaction.InteractionEvent): void
+    private onCancel(evt: PIXI.InteractionEvent): void
     {
         if (this._downPoint == null)
         {

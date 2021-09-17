@@ -59,7 +59,7 @@ var Label = (function (_super) {
         set: function (value) {
             this._value = value || '';
             if (!this._text) {
-                this._text = new PIXI.Text();
+                this._text = new PIXI.Text('');
                 this['addChild'](this._text);
             }
             this.style = {
@@ -89,12 +89,12 @@ var Label = (function (_super) {
     });
     Label.prototype.setStyle = function (_style) {
         return new PIXI.TextStyle({
-            align: this.textAlign,
-            fill: this.textColor,
-            fontWeight: '' + (this.bold ? 500 : 400),
-            fontStyle: this.italic ? 'italic' : 'normal',
-            fontSize: this.size,
-            fontFamily: this.fontFamily
+            align: (this.textAlign),
+            fill: (this.textColor),
+            fontWeight: ('' + (this.bold ? 500 : 400)),
+            fontStyle: (this.italic ? 'italic' : 'normal'),
+            fontSize: (this.size),
+            fontFamily: (this.fontFamily)
         });
     };
     Object.defineProperty(Label.prototype, "size", {

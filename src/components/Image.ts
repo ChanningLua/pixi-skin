@@ -142,7 +142,7 @@ export class Image extends CompatibilityContainer
                     return
                 }
                 let _realUrl = getTextureUrl(value);
-                this._texture = PIXI.Texture.fromImage(_realUrl);
+                this._texture = PIXI.Texture.from(_realUrl);
                 this._texture.once('update', () =>
                 {
                     this.updateView();

@@ -90,6 +90,10 @@ export class ResourceConfig {
 	 */
 	private keyMap:any = {};
 	/**
+	 * URL字典
+	 */
+	private urlMap:any = {};
+	/**
 	 * 加载组字典
 	 */
 	private groupDic:any = {};
@@ -161,8 +165,10 @@ export class ResourceConfig {
 	 * @memberof ResourceConfig
 	 */
 	public addItemToKeyMap(item:any):void{
-		if(!this.keyMap[item.name])
+		if(!this.keyMap[item.name]) {
 			this.keyMap[item.name] = item;
+			this.urlMap[item.url] = item.name;
+		}
 	}
 
 	/**
@@ -172,7 +178,7 @@ export class ResourceConfig {
 	 */
 	public getName(key:string):string{
 		let data:any = this.keyMap[key];
-		return data?data.name:"";
+		return data ? data.name : "";
 	}
 
 	/**
@@ -195,6 +201,15 @@ export class ResourceConfig {
 		if (data)
 			return this.parseResourceItem(data);
 		return null;
+	}
+
+	/**
+	 * 根据URL获取对应的键名
+	 * @param {string} key
+	 * @memberof ResourceConfig
+	 */
+	public getResourceNameByUrl(key:string):string {
+		return this.urlMap[key] || null;
 	}
 
 	/**

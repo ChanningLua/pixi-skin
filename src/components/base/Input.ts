@@ -266,19 +266,17 @@ export class Input extends PIXI.Container {
 		}
 	}
 
-	// RENDER & UPDATE
+	// // for pixi v4
+	// renderWebGL (renderer) {
+	// 	super.renderWebGL(renderer)
+	// 	this._renderInternal(renderer)
+	// }
 
-	// for pixi v4
-	renderWebGL (renderer) {
-		super.renderWebGL(renderer)
-		this._renderInternal(renderer)
-	}
-
-	// for pixi v4
-	renderCanvas (renderer) {
-		super.renderCanvas(renderer)
-		this._renderInternal(renderer)
-	}
+	// // for pixi v4
+	// renderCanvas (renderer) {
+	// 	super.renderCanvas(renderer)
+	// 	this._renderInternal(renderer)
+	// }
 
 	// for pixi v5
 	render (renderer) {

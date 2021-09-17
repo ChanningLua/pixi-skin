@@ -29,7 +29,7 @@ var SpriteSheet = (function () {
     SpriteSheet.prototype.sheetTexture = function () {
         core.unlisten('render', this.sheetTexture, this);
         var sheetTexture = this.sheet.getTexture(this.path);
-        var canvas = sheetTexture.baseTexture.source;
+        var canvas = sheetTexture.baseTexture['resource'];
         var context = canvas.getContext('2d');
         for (var key in this.textureFrames) {
             var textureFrame = this.textureFrames[key];

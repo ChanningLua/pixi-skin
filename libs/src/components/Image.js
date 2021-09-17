@@ -128,7 +128,7 @@ var Image = (function (_super) {
                         return;
                     }
                     var _realUrl = getTextureUrl(value);
-                    this._texture = PIXI.Texture.fromImage(_realUrl);
+                    this._texture = PIXI.Texture.from(_realUrl);
                     this._texture.once('update', function () {
                         _this.updateView();
                     }, this);

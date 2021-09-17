@@ -4,6 +4,7 @@ export declare class ResourceConfig {
     getRawGroupByName(name: string): any[];
     createGroup(name: string, keys: string[], override?: boolean): boolean;
     private keyMap;
+    private urlMap;
     private groupDic;
     parseConfig(data: any, folder: string): void;
     addSubkey(subkey: string, name: string): void;
@@ -11,6 +12,7 @@ export declare class ResourceConfig {
     getName(key: string): string;
     getType(key: string): string;
     getResourceItem(key: string): ResourceItem;
+    getResourceNameByUrl(key: string): string;
     private parseResourceItem;
 }
 //# sourceMappingURL=ResourceConfig.d.ts.map

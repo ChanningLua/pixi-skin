@@ -53,8 +53,6 @@ export declare class Input extends PIXI.Container {
     _onRemoved(): void;
     private state;
     _setState(state: any): void;
-    renderWebGL(renderer: any): void;
-    renderCanvas(renderer: any): void;
     render(renderer: any): void;
     _renderInternal(renderer: any): void;
     _update(): void;

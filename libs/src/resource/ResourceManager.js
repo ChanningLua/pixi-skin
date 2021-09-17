@@ -200,6 +200,9 @@ var ResourceManagerClass = (function () {
     ResourceManagerClass.prototype.getResourceItem = function (key) {
         return this.resourceConfig.getResourceItem(key);
     };
+    ResourceManagerClass.prototype.getResourceNameByUrl = function (key) {
+        return this.resourceConfig.getResourceNameByUrl(key);
+    };
     ResourceManagerClass.prototype.loadAssets = function (keyOrPath, complete, responseType, oneComplete) {
         this.resourceLoader.loadAssets(keyOrPath, complete, responseType, oneComplete);
     };

@@ -34,6 +34,7 @@ export declare class ResourceManagerClass {
     parseConfig(data: any, folder: string): void;
     getAssets(key: string, load?: boolean): Promise<any>;
     getResourceItem(key: string): ResourceItem;
+    getResourceNameByUrl(key: string): string;
     loadAssets(keyOrPath: string | string[], complete: (assets?: any | any[], path?: string) => void, responseType?: XMLHttpRequestResponseType, oneComplete?: (keyOrPath?: string, assets?: any) => void): void;
     private asyncDic;
     private onResourceItemComp;

@@ -85,7 +85,7 @@ export class ScrollerBase extends PIXI.Container {
         screenHeight:     this.options.boxHeight, 
         interaction:      this.options.interaction
       });
-      this.content = this['addChild'](viewport);
+      this.content = this['addChild'](<any>viewport);
       this.content
           .decelerate()
           .on('moved', () => this._drawScrollbars());
@@ -96,11 +96,11 @@ export class ScrollerBase extends PIXI.Container {
       } else {
           let ticker
           const pixiNS = PIXI
-          if (parseInt(/^(\d+)\./.exec(PIXI.VERSION)[1]) < 5) {
-              ticker = pixiNS.ticker.shared;
-          } else {
+        //   if (parseInt(/^(\d+)\./.exec(PIXI.VERSION)[1]) < 5) {
+        //       ticker = pixiNS['ticker'].shared;
+        //   } else {
               ticker = pixiNS['Ticker'].shared;
-          }
+        //   }
           this.options.ticker = options.ticker || ticker;
       }
 
@@ -534,7 +534,7 @@ export class ScrollerBase extends PIXI.Container {
 
   /**
    * 
-   * @param {PIXI.interaction.InteractionEvent} e
+   * @param {PIXI.InteractionEvent} e
    * @private
    */
   public scrollbarDown (e) {
@@ -580,7 +580,7 @@ export class ScrollerBase extends PIXI.Container {
 
   /**
    * 
-   * @param {PIXI.interaction.InteractionEvent} e
+   * @param {PIXI.InteractionEvent} e
    * @private
    */
   public scrollbarMove (e) {

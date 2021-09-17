@@ -341,34 +341,34 @@ export class CompatibilityContainer extends PIXI.Container implements UIComponen
 
     }
 
-    protected onPointerCancel(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerCancel(evt: PIXI.InteractionEvent): void
     {
 
     }
-    protected onPointerDown(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerDown(evt: PIXI.InteractionEvent): void
     {
 
     }
-    protected onPointerMove(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerMove(evt: PIXI.InteractionEvent): void
     {
         
     }
-    protected onPointerOut(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerOut(evt: PIXI.InteractionEvent): void
     {
     }
-    protected onPointerOver(evt: PIXI.interaction.InteractionEvent): void
-    {
-
-    }
-    protected onPointerTap(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerOver(evt: PIXI.InteractionEvent): void
     {
 
     }
-    protected onPointerUp(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerTap(evt: PIXI.InteractionEvent): void
+    {
+
+    }
+    protected onPointerUp(evt: PIXI.InteractionEvent): void
     {
         
     }
-    protected onPointerOutside(evt: PIXI.interaction.InteractionEvent): void
+    protected onPointerOutside(evt: PIXI.InteractionEvent): void
     {
 
     }

@@ -75,7 +75,7 @@ export class Label extends CompatibilityContainer
     public set text(value: string) {
         this._value = value || '';
         if (!this._text) {
-            this._text = new PIXI.Text();
+            this._text = new PIXI.Text('');
             this['addChild'](this._text);
         }
         this.style = {
@@ -111,12 +111,12 @@ export class Label extends CompatibilityContainer
     }
     private setStyle (_style): PIXI.TextStyle {
         return new PIXI.TextStyle ({
-            align: this.textAlign,
-            fill: this.textColor,
-            fontWeight: '' + (this.bold ? 500 : 400),
-            fontStyle: this.italic ? 'italic' : 'normal',
-            fontSize: this.size,
-            fontFamily: this.fontFamily
+            align: <any>(this.textAlign),
+            fill: <any>(this.textColor),
+            fontWeight: <any>('' + (this.bold ? 500 : 400)),
+            fontStyle: <any>(this.italic ? 'italic' : 'normal'),
+            fontSize: <any>(this.size),
+            fontFamily: <any>(this.fontFamily)
         })
     }
 

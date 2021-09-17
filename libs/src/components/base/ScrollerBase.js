@@ -59,12 +59,7 @@ var ScrollerBase = (function (_super) {
         else {
             var ticker = void 0;
             var pixiNS = PIXI;
-            if (parseInt(/^(\d+)\./.exec(PIXI.VERSION)[1]) < 5) {
-                ticker = pixiNS.ticker.shared;
-            }
-            else {
-                ticker = pixiNS['Ticker'].shared;
-            }
+            ticker = pixiNS['Ticker'].shared;
             _this.options.ticker = options.ticker || ticker;
         }
         _this.scrollbar = _this['addChild'](new PIXI.Graphics());

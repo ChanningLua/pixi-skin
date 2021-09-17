@@ -248,14 +248,6 @@ var Input = (function (_super) {
             this._updateSubstitution();
         }
     };
-    Input.prototype.renderWebGL = function (renderer) {
-        _super.prototype.renderWebGL.call(this, renderer);
-        this._renderInternal(renderer);
-    };
-    Input.prototype.renderCanvas = function (renderer) {
-        _super.prototype.renderCanvas.call(this, renderer);
-        this._renderInternal(renderer);
-    };
     Input.prototype.render = function (renderer) {
         _super.prototype['render'].call(this, renderer);
         this._renderInternal(renderer);

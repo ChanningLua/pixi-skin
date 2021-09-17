@@ -2,6 +2,7 @@ import { ResourceItem } from './ResourceItem';
 var ResourceConfig = (function () {
     function ResourceConfig() {
         this.keyMap = {};
+        this.urlMap = {};
         this.groupDic = {};
     }
     ResourceConfig.prototype.getGroupByName = function (name) {
@@ -96,8 +97,10 @@ var ResourceConfig = (function () {
         }
     };
     ResourceConfig.prototype.addItemToKeyMap = function (item) {
-        if (!this.keyMap[item.name])
+        if (!this.keyMap[item.name]) {
             this.keyMap[item.name] = item;
+            this.urlMap[item.url] = item.name;
+        }
     };
     ResourceConfig.prototype.getName = function (key) {
         var data = this.keyMap[key];
@@ -112,6 +115,9 @@ var ResourceConfig = (function () {
         if (data)
             return this.parseResourceItem(data);
         return null;
+    };
+    ResourceConfig.prototype.getResourceNameByUrl = function (key) {
+        return this.urlMap[key] || null;
     };
     ResourceConfig.prototype.parseResourceItem = function (data) {
         var resItem = new ResourceItem(data.name, data.url, data.type);

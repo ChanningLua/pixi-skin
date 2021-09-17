@@ -287,14 +287,23 @@ export class ResourceManagerClass{
 	}	
 
 	/**
-     * 获取key对应的加载项信息
-     * 
-     * @param {string} key 资源名称
-     * @returns {ResourceItem} 
-     * @memberof ResourceManagerClass
-     */
+	 * 获取key对应的加载项信息
+	 * 
+	 * @param {string} key 资源名称
+	 * @returns {ResourceItem} 
+	 * @memberof ResourceManagerClass
+	 */
 	public getResourceItem(key:string){
 		return this.resourceConfig.getResourceItem(key);
+	}
+
+	/**
+	 * 根据URL获取对应的键名
+	 * @param {string} key
+	 * @memberof ResourceManagerClass
+	 */
+	public getResourceNameByUrl(key:string):string {
+		return this.resourceConfig.getResourceNameByUrl(key);
 	}
 
 	/**
