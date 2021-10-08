@@ -372,7 +372,7 @@ export class ResourceManagerClass{
      * @memberof ResourceManagerClass
      */
 	public loadStyleFiles(cssFiles:string[], handler:(err?:Error)=>void):void
-    {
+  {
 		this.resourceLoader.loadStyleFiles(cssFiles,handler);
 	}
 
